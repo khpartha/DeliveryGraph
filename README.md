@@ -35,25 +35,25 @@ Efficient route planning is essential for delivery operations to reduce costs, m
 
 Considers bidirectional roads with travel times as weights.
 
-Delivery Time Window Constraints
+## Delivery Time Window Constraints
 
 Each location has a time window (earliest and latest delivery time).
 
 Vehicles must reach within this window to ensure successful deliveries.
 
-Vehicle Capacity Validation
+## Vehicle Capacity Validation
 
 Each location has a demand (number of packages to be delivered).
 
 Ensures the total demand does not exceed vehicle capacity.
 
-Graph Representation
+## Graph Representation
 
 Implements an adjacency list to store delivery locations and routes efficiently.
 
 Supports dynamic addition of locations and roads.
 
-Error Handling
+## Error Handling
 
 Detects and prevents duplicate locations.
 
