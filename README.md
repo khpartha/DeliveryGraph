@@ -33,42 +33,48 @@ Efficient route planning is essential for delivery operations to reduce costs, m
 
 - Uses Dijkstra’s Algorithm to find the optimal route between two locations.
 
-Considers bidirectional roads with travel times as weights.
+- Considers bidirectional roads with travel times as weights.
 
 ## Delivery Time Window Constraints
 
-Each location has a time window (earliest and latest delivery time).
+- Each location has a time window (earliest and latest delivery time).
 
-Vehicles must reach within this window to ensure successful deliveries.
+- Vehicles must reach within this window to ensure successful deliveries.
 
 ## Vehicle Capacity Validation
 
-Each location has a demand (number of packages to be delivered).
+- Each location has a demand (number of packages to be delivered).
 
-Ensures the total demand does not exceed vehicle capacity.
+- Ensures the total demand does not exceed vehicle capacity.
 
 ## Graph Representation
 
-Implements an adjacency list to store delivery locations and routes efficiently.
+- Implements an adjacency list to store delivery locations and routes efficiently.
 
-Supports dynamic addition of locations and roads.
+- Supports dynamic addition of locations and roads.
 
 ## Error Handling
 
-Detects and prevents duplicate locations.
+- Detects and prevents duplicate locations.
 
-Ensures valid routes before computing paths.
+- Ensures valid routes before computing paths.
 
-Handles scenarios where no valid path exists.
+- Handles scenarios where no valid path exists.
 
 
 ## Tech Stack
 
-- Python 3.10+
-- pandas for data manipulation
-- NumPy for numerical operations
-- scikit-learn or TensorFlow for machine learning
-- Matplotlib for data visualization
+- C++ (Standard Library) - Core programming language
+
+- Graph Algorithms - Dijkstra’s Algorithm for shortest path computation
+
+- Data Structures
+
+    - unordered_map (hash map) for fast location lookup
+
+    - vector for adjacency list representation
+
+    - priority_queue for efficient shortest path calculations
 
 
 
