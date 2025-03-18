@@ -119,26 +119,54 @@ graph.addLocation({"B", 9, 13, 3});
 ```
 
 - **Defining Roads Between Locations**
+  
+ ```bash
 
-- **View Result Example**
-- <img width="618" alt="image" src="https://github.com/user-attachments/assets/16a92e45-2ebe-44eb-870e-876b562ac7ce" />
+graph.addEdge("A", "B", 10);
+graph.addEdge("B", "C", 5);
+
+```
+
+- **Finding the Fastest Route**
+  
+ ```bash
+vector<string> route = graph.shortestPath("A", "E");
+graph.printRoute(route);
+
+```
+- **Validating the Route**
+  
+ ```bash
+
+int startTime = 8;
+int vehicleCapacity = 15;
+bool isValid = graph.validateRoute(route, startTime, vehicleCapacity);
+
+```
+
 
 
 
 
 ## Workflow Description
 
-- **Data Ingestion**Historical production data is read from a CSV or generated synthetically.
-- **Feature Engineering & Model Training**Input features (months) are fed into a scikit-learn or TensorFlow model.
-Model learns the relationship between month and production.
-- **Prediction**Model predicts production for the next month (or multiple months ahead).
-
-## Contributing
-- Improving documentation,
-- Adding new forecasting methods,
+- **Graph Creation** Delivery locations and roads are added.
+-**Shortest Path Calculation**Dijkstra’s Algorithm finds the optimal path.
   
-please fork this repository and create a pull request with a clear description of your changes.
+- **Route Validation**:
 
+   - Ensures deliveries fit within time windows.
+ 
+   - Confirms the vehicle can carry the required load.
+     
+## Contributing
+**If you would like to improve the project by**:
+
+- Enhancing the route optimization logic
+
+- Adding support for alternative algorithms (e.g., A)*
+
+- Implementing real-world data integration
  
 
 ## Contact 
