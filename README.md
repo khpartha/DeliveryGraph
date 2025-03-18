@@ -84,7 +84,7 @@ Efficient route planning is essential for delivery operations to reduce costs, m
  **Clone the repository:**
 
    ```bash
-   git clone https://github.com/khpartha/PETcal.git
+   git clone https://github.com/khpartha/DeliveryGraph.git
  
 ```
 
