@@ -89,31 +89,36 @@ Efficient route planning is essential for delivery operations to reduce costs, m
 ```
 
 
-## project Structure
+## Project structure
  
    ```bash
-  ai-pet-production-forecast/
+ delivery-route-optimizer/
 │
-├── README.md                  <- This readme
-├── requirements.txt           <- Project dependencies
-├── forecast_linear.py         <- Example scikit-learn linear regression script
-├── forecast_nn.py             <- Example TensorFlow neural network script
-├── pet_calculator.py          <- Script/module for PET consumption calculation
-├── combined_app.py            <- End-to-end script combining forecasting & PET calculation
-├── production_data.csv        <- Example data file (if you have real data)
-└── ...
+├── README.md             <- This readme
+├── main.cpp              <- Main program file (execution starts here)
+├── Graph.cpp             <- Graph class implementation (Dijkstra’s Algorithm)
+├── Graph.h               <- Header file for Graph class
+└── Makefile              <- Compilation instructions (optional)
  
 ```
 **key Files**
-- forecast_linear.py: Demonstrates a simple Linear Regression approach (scikit-learn).
-- forecast_nn.py: Demonstrates a basic neural network approach (TensorFlow).
-- pet_calculator.py: Contains geometry and material conversion logic for calculating PET in grams.
-- combined_app.py: Integrates forecasting + PET consumption + cost estimation into one pipeline.
+- main.cpp: Contains the program’s execution logic, including adding locations and edges.
 
+- Graph.cpp: Implements the Graph class with shortest path and validation logic.
+
+- Graph.h: Declares functions and data structures used in the Graph class.
 ## Usage
-- **Generate or Load Data**
- 
-- **Run Forecasting**
+- **Adding Delivery Locations**
+  
+ ```bash
+
+DeliveryGraph graph;
+graph.addLocation({"A", 8, 12, 5});
+graph.addLocation({"B", 9, 13, 3});
+
+```
+
+- **Defining Roads Between Locations**
 
 - **View Result Example**
 - <img width="618" alt="image" src="https://github.com/user-attachments/assets/16a92e45-2ebe-44eb-870e-876b562ac7ce" />
